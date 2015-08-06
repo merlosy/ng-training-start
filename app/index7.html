@@ -6,10 +6,10 @@
 	</head>
 	<body ng-controller="MainController">
 		<div class="container">
-			<a href="index5.html">< Précédent</a>
-			<a href="index7.html">Suivant ></a>
+			<a href="index6.html">< Précédent</a>
+			<a href="index8.html">Suivant ></a>
 		</div>
-		<h2>Exemple 6</h2>
+		<h2>Exemple 7</h2>
 		<div class="container" ng-cloak>
 			<form ng-submit="addPerson(newFriend)" novalidate>
 				<label for="new-friend">Mon nouvel ami :</label>
@@ -18,7 +18,7 @@
 			</form>
 			<p>Mes amis sont :</p>
 			<ul>
-				<li ng-repeat="person in people">{{person.firstname}} 
+				<li ng-repeat="person in people | orderBy: 'firstname'">{{person.firstname | uppercase}} 
 					<button type="button" ng-click="removePerson($index)">Supprimer</button>
 				</li>
 			</ul>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Ng-Training Start</title>
+	</head>
+	<body>
+		<div class="container">
+			<a href="index5.html">< Précédent</a>
+			<a href="index7.html">Suivant ></a>
+		</div>
+		<h2>Exemple 6</h2>
+		<div class="container" ng-init="names=['Gérard', 'Francis', 'Josette', 'Euridice']">
+			<form ng-submit="names.push(nouvelAmi)" novalidate>
+				<label for="name">Mon nouvel ami :</label>
+				<input id="name" type="text" ng-model="nouvelAmi">
+				<button type="submit">Ajouter !</button>
+			</form>
+			<p>Mes amis sont :</p>
+			<ul>
+				<li ng-repeat="name in names track by $index | orderBy 'name'">{{name | uppercase}} 
+					<button type="button" ng-click="names.splice($index, 1)">Supprimer</button>
+				</li>
+			</ul>
+		</div>
+		<script src="angular.min.js"></script>
+	</body>
+</html>

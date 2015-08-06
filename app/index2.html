@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Ng-Training Start</title>
+	</head>
+	<body>
+		<div class="container">
+			<a href="index.html">< Précédent</a>
+			<a href="index3.html">Suivant ></a>
+		</div>
+		<h2>Exemple 2</h2>
+		<div class="container" ng-init="name='Sam'">
+			<label for="name">Nom :</label>
+			<input id="name" type="text" ng-model="name">
+			<p>
+				Vous avez entré : {{name}}
+			</p>
+		</div>
+		<script src="angular.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html ng-app>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Ng-Training Start</title>
+	</head>
+	<body>
+		<div class="container">
+			<a href="index2.html">< Précédent</a>
+			<a href="index4.html">Suivant ></a>
+		</div>
+		<h2>Exemple 3</h2>
+		<div class="container" ng-init="names=['Gérard', 'Francis', 'Josette', 'Euridice', 'Jacob']">
+			<p>Mes amis sont :</p>
+			<ul>
+				<li ng-repeat="name in names">{{name}}</li>
+			</ul>
+		</div>
+		<script src="angular.min.js"></script>
+	</body>
+</html>

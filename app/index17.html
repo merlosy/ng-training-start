@@ -1,0 +1,20 @@
+<!doctype html>
+<html ng-app="myapp">
+	<head>
+		<title>Ng-Training Start</title>
+	</head>
+	<body ng-controller="MainController" >
+		<div class="container">
+			<label for="name">Nom :</label>
+			<input id="name" type="text" ng-model="name">
+			<p>
+				Vous avez entr&eacute; : {{name}}
+			</p>
+			<div ui-view>
+			</div>
+		</div>
+		<script src="angular.min.js"></script>
+		<script src="angular-ui-router.min.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>

@@ -3,8 +3,7 @@
 
 	var app = angular.module('myapp', []);
 
-	app.controller('MainController', ['$scope', '$log', 
-                    function($scope, $log){
+	app.controller('MainController', ['$scope', '$log', function($scope, $log){
         
         $scope.people = [
             {   firstname: 'Gérard'     },

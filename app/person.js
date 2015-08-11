@@ -3,6 +3,19 @@
 
 	var app = angular.module('myapp.person', []);
 
+
+	app.factory('Person', ['$log', function($log){ 
+		var person = undefined;
+		return {
+			getSelected : function() {
+				return person;
+			},
+			setSelected : function(p) {
+				person = p;
+			}
+		};
+	}]);
+
 	app.directive('person', ['$log', function($log){
         return {
             restrict: 'E',

@@ -1,0 +1,13 @@
+.btn-simple {
+	border: none;
+	color: #ccc;
+}
+
+.btn-simple:hover {
+	background-color: transparent;
+	color: #777;
+}
+
+.text-red {
+	color: #e15423;
+}

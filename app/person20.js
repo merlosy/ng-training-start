@@ -27,7 +27,7 @@
 				+'	</span>'
 				+'</button>'
 				+'<button class="btn btn-xs btn-primary" type="button" ng-click="eventSee(person)">Voir</a>'
-				+'<button class="btn btn-xs btn-danger" type="button" ng-click="eventDelete(person)" aria-label="Supprimer" title="Supprimer">'
+				+'<button class="btn btn-xs btn-danger" type="button" ng-click="delete(person)" aria-label="Supprimer" title="Supprimer">'
 				+'	<span class="glyphicon glyphicon-remove"></span>'
 				+'</button></div>',
 			scope : {
@@ -35,6 +35,13 @@
 				eventSee : '&onSee',
 				eventFavorite : '&onFavorite',
 				eventDelete : '&onDelete'
+			},
+			link : function (scope, element, attrs, ctrl){
+
+				scope.delete = function(person) {
+					if (confirm("Êtes-vous sûr de vouloir supprimer "+person.firstname+"?"))
+						scope.eventDelete(person);
+				};
 			}
         };
     }]);

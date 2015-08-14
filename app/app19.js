@@ -83,6 +83,7 @@
             function (newVal, oldVal) {
                 if(newVal!==oldVal) { 
                     $scope.person = newVal;
+                    $scope.contactMode = 'show';
                 }
             });
 

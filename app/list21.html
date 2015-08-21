@@ -1,0 +1,31 @@
+<div ng-controller="PersonListController">
+	<form class="form-horizontal" ng-submit="addPerson(newFriend)" novalidate>
+		<div class="form-group">
+			<label class="control-label col-md-3" for="new-friend">Nouveau contact :</label>
+			<div class="col-md-6">
+				<input class="form-control" id="new-friend" type="text" ng-model="newFriend">
+			</div>
+			<div class="col-md-2">
+				<button class="btn btn-primary" type="submit" >
+					<span class="glyphicon glyphicon-plus"></span> Ajouter
+				</button>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-md-3" for="friend-filter">Filtrer :</label>
+			<div class="col-md-6">
+				<input class="form-control" id="friend-filter" type="search" ng-model="friendFilter">
+			</div>
+		</div>
+	</form>
+	<p>Mes amis sont :</p>
+	<div class="row">
+		<div class="col-md-3 col-sm-4 col-xs-6" ng-repeat="person in people | orderBy:'firstname' | filter:{firstname:friendFilter}">
+			<person-tile person="person" 
+					on-favorite="toggleFavorite(person)" 
+					on-see="seePerson(person)" 
+					on-delete="removePerson(person)">
+			</person-tile>
+		</div>
+	</div>
+</div>
